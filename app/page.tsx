@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -28,12 +29,16 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 pt-1">
-                <Button size="lg" className="px-8 py-6 text-base rounded-md">
-                  Get Started
-                </Button>
-                <Button size="lg" variant="outline" className="px-8 py-6 text-base rounded-md">
-                  Learn More
-                </Button>
+                <Link href="/register">
+                  <Button size="lg" className="px-8 py-6 text-base rounded-md w-full sm:w-auto">
+                    Register
+                  </Button>
+                </Link>
+                <Link href="/login">
+                  <Button size="lg" variant="outline" className="px-8 py-6 text-base rounded-md w-full sm:w-auto">
+                    Login
+                  </Button>
+                </Link>
               </div>
               <div className="flex items-center gap-4 pt-6">
                 <div className="flex -space-x-3">
@@ -202,30 +207,6 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="w-full py-16 md:py-24 bg-primary/5 flex justify-center">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 rounded-lg border border-primary/20 p-8 md:p-12 bg-background">
-            <div className="space-y-4 max-w-[600px]">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                Ready to get started?
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                Join thousands of developers and start building your next project today.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button size="lg" className="px-8 rounded-md">
-                Sign Up for Free
-              </Button>
-              <Button size="lg" variant="outline" className="px-8 rounded-md">
-                Contact Sales
-              </Button>
-            </div>
           </div>
         </div>
       </section>
