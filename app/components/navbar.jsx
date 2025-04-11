@@ -1,12 +1,17 @@
 import { ModeToggle } from "./toggleTheme";
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
+
 export function Navbar() {
   return (
-    <div className="flex flex-row justify-around py-4 w-full">
-      <Badge variant="outline"><p className="flex self-center text-2xl font-bold text-[#ef4444]">Airavat</p></Badge>
-      <div className="flex flex-row gap-6">
-        <ModeToggle />
+    <nav className="w-full bg-background border-b border-muted/20">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between py-4">
+        <Badge variant="outline" className="px-3 py-1 text-lg font-bold text-primary">
+          Airavat
+        </Badge>
+        <div className="flex items-center gap-6">
+          <ModeToggle />
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
